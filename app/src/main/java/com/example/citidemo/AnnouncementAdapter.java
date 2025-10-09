@@ -31,7 +31,7 @@ public class AnnouncementAdapter extends RecyclerView.Adapter<AnnouncementAdapte
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(context).inflate(R.layout.item_announcement, parent, false);
+        View view = LayoutInflater.from(context).inflate(R.layout.item_announcements, parent, false);
         return new ViewHolder(view);
     }
 

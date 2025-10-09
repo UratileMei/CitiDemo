@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_gradient_bg"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- App Logo -->
+        <ImageView
+            android:id="@+id/ivSplashLogo"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:contentDescription="@string/app_name"
+            android:elevation="4dp"
+            android:src="@drawable/ic_launcher_foreground"/>
+
+        <!-- App Name -->
+        <TextView
+            android:id="@+id/tvSplashAppName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:elevation="4dp"
+            android:letterSpacing="0.05"
+            android:text="Municipal Connect"
+            android:textColor="#FFFFFF"
+            android:textSize="32sp"
+            android:textStyle="bold"/>
+
+        <!-- Tagline -->
+        <TextView
+            android:id="@+id/tvSplashTagline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:elevation="4dp"
+            android:text="Your Voice, Your Community"
+            android:textColor="#E0E0E0"
+            android:textSize="16sp"/>
+
+    </LinearLayout>
+
+    <!-- Footer -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FNB Hackathon 2025"
+            android:textColor="#BDBDBD"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Infrastructure &amp; Services"
+            android:textColor="#9E9E9E"
+            android:textSize="11sp"/>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,3 +1,59 @@
 <resources>
-    <string name="app_name">CitiDemo</string>
+    <string name="app_name">Municipal Connect</string>
+
+    <!-- Navigation -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Login/Signup -->
+    <string name="login">Login</string>
+    <string name="signup">Sign Up</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="forgot_password">Forgot Password?</string>
+
+    <!-- Home -->
+    <string name="welcome_back">Welcome back!</string>
+    <string name="quick_actions">Quick Actions</string>
+    <string name="recent_announcements">Recent Announcements</string>
+
+    <!-- Report Issue -->
+    <string name="report_issue">Report Issue</string>
+    <string name="issue_category">Issue Category</string>
+    <string name="issue_title">Issue Title</string>
+    <string name="issue_description">Detailed Description</string>
+    <string name="location">Location</string>
+    <string name="add_photo">Add Photo (Optional)</string>
+    <string name="priority_level">Priority Level</string>
+    <string name="submit_report">Submit Report</string>
+
+    <!-- Categories -->
+    <string name="water_sanitation">Water &amp; Sanitation</string>
+    <string name="electricity_power">Electricity &amp; Power</string>
+    <string name="roads_potholes">Roads &amp; Potholes</string>
+    <string name="waste_management">Waste Management</string>
+    <string name="street_lights">Street Lights</string>
+    <string name="public_safety">Public Safety</string>
+    <string name="parks_recreation">Parks &amp; Recreation</string>
+    <string name="other">Other</string>
+
+    <!-- Status -->
+    <string name="status_pending">Pending</string>
+    <string name="status_in_progress">In Progress</string>
+    <string name="status_resolved">Resolved</string>
+    <string name="status_rejected">Rejected</string>
+
+    <!-- Priority -->
+    <string name="priority_low">Low</string>
+    <string name="priority_medium">Medium</string>
+    <string name="priority_high">High</string>
+
+    <!-- Messages -->
+    <string name="loading">Loading…</string>
+    <string name="no_data">No data available</string>
+    <string name="error_occurred">An error occurred</string>
+    <string name="success">Success!</string>
+
+    <!-- Default Web Client ID - Replace with your actual ID -->
+    <string name="default_web_client_id">YOUR_WEB_CLIENT_ID_HERE</string>
 </resources>
