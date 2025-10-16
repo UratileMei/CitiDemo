@@ -42,7 +42,7 @@
 
         <!-- Main Activity -->
         <activity
-            android:name=".activities.MainActivity"
+            android:name=".activities.RegisterActivity"
             android:exported="false"
             android:screenOrientation="portrait" />
 

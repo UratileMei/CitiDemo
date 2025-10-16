@@ -1,43 +1,77 @@
 package com.example.citidemo.activities;
 
-import android.content.Intent;
 import android.os.Bundle;
-
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
-import android.widget.Button;
-import android.widget.EditText;
+import android.view.View;
 import android.widget.TextView;
-import android.widget.Toast;
+import androidx.appcompat.app.AppCompatActivity;
 import com.example.citidemo.R;
-import com.google.android.material.tabs.TabItem;
+import com.google.android.material.button.MaterialButton;
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.textfield.TextInputLayout;
 
 public class LoginActivity extends AppCompatActivity {
 
-    private EditText tilEmail;
-    private TabItem sign_up_tab;
+    private TabLayout tabLayout;
+    private TextInputLayout tilFullName, tilEmail, tilPassword, tilConfirmPassword;
+    private TextView tvForgotPassword;
+    private MaterialButton btnSubmit;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_login);
+
+        // Initialize all UI elements
+        tabLayout = findViewById(R.id.tabLayout);
+        tilFullName = findViewById(R.id.tilFullName);
         tilEmail = findViewById(R.id.tilEmail);
-        sign_up_tab = findViewById(R.id.sign_up_tab);
+        tilPassword = findViewById(R.id.tilPassword);
+        tilConfirmPassword = findViewById(R.id.tilConfirmPassword);
+        tvForgotPassword = findViewById(R.id.tvForgotPassword);
+        btnSubmit = findViewById(R.id.btnSubmit);
 
-        sign_up_tab.setOnClickListener(v -> {
-            Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
-            startActivity(intent);
-        });
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
+        // Handle tab changes
+        setupTabLayout();
 
+    }
+
+    private void setupTabLayout() {
+        tabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+            @Override
+            public void onTabSelected(TabLayout.Tab tab) {
+                if (tab.getText() == null) return;
+                String tabName = tab.getText().toString();
+
+                if (tabName.equals("Login")) {
+                    showLoginFields();
+                } else if (tabName.equals("Sign Up")) {
+                    showSignUpFields();
+                }
+            }
+
+            @Override
+            public void onTabUnselected(TabLayout.Tab tab) { }
+
+            @Override
+            public void onTabReselected(TabLayout.Tab tab) { }
         });
+    }
+
+    private void showLoginFields() {
+        tilFullName.setVisibility(View.GONE);
+        tilConfirmPassword.setVisibility(View.GONE);
+        tvForgotPassword.setVisibility(View.VISIBLE);
+        btnSubmit.setText("Login");
+    }
+
+    private void showSignUpFields() {
+        tilFullName.setVisibility(View.VISIBLE);
+        tilConfirmPassword.setVisibility(View.VISIBLE);
+        tvForgotPassword.setVisibility(View.GONE);
+        btnSubmit.setText("Sign Up");
+    }
+
+    private void authentication(){
+
     }
 }
