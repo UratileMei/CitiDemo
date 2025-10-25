@@ -1,4 +1,4 @@
-# CiiDemo FNB Hackathon
+# CitiDemo 
 
 **Category:** Infrastructure & Services  
 **Description:** Municipal Connect is an Android app that empowers residents to interact with their municipality in one place. From reporting infrastructure issues to staying updated with community events, the app promotes transparency, accountability, and collaboration.  
